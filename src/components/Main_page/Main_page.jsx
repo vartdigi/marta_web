@@ -23,6 +23,9 @@ export const Main_page = () => {
 
       <div className="MainCitat">
         <p>"Creativity is intelligence having fun."</p>
+        <div className="Autor">
+          <p> - Albert Einstein</p>
+        </div>
       </div>
 
       <div className="sipka"></div>
