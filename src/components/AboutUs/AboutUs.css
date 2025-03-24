@@ -1,23 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
 
 
-.AboutUs {
-  background: rgb(190, 210, 236)
+
+#AboutUs {
+  background: rgba(225, 229, 234, 0.7);
+  padding: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .AboutPic {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
+  width: 600px;
+  height: 400px;
+  flex-shrink: 0;
+  margin-bottom: -40px;
+}
 
+.AboutFotka {
+  display: flex;
+  justify-items: flex-end;
+  flex: 1;
 }
 
 .HlavniNazev {
+
   color: #000;
-  font-family: "Lunasima", sans-serif;
-  font-size: 80px;
+  font-family: "Montserrat", normal;
+  font-size: 35px;
   font-style: normal;
   font-weight: 400;
   line-height: 117.779%;
   /* 94.223px */
+  margin-top: -60px;
+
+}
+
+.Text {
+  color: #000;
+  padding: 30px;
+  font-family: "Montserrat", normal;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 39px;
+}
+
+.ZahlavniText {
+  color: #000;
+  font-family: "Monserrat", normal;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 117.779%;
+  /* 94.223px */
+
 }

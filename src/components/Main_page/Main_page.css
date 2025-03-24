@@ -8,12 +8,17 @@ html {
 
 }
 
+
+
 .HlavniFotka {
   position: relative;
   width: 100%;
-  height: 100%;
-  top: -5rem;
+  height: 100vh;
+
+  top: 0;
+
 }
+
 
 .logo {
   position: absolute;
@@ -26,6 +31,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: 10;
+
 
 
 
