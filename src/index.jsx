@@ -4,6 +4,7 @@ import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React from 'react';
 import { App } from './components/App/App';
+import { AboutFull } from './components/AboutFull/AboutFull.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/about-full',
+        element: <AboutFull />,
       },
     ],
   },

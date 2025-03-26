@@ -1,6 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
 import Onas from '../../../assets/Onas.jpg';
+import { Link } from 'react-router-dom';
 
 export const AboutUs = () => {
   return (
@@ -19,6 +20,10 @@ export const AboutUs = () => {
             Barvy, smích, přátelství a svoboda, to je to, co nám v práci každý
             den chybělo. Sundali jsme si boty, změnili černý dress-code na
             barevný a začali sme se bavit.
+            <Link to="/about-full" className="read-more">
+              {' '}
+              Číst dále...
+            </Link>
           </p>
         </div>
       </div>

@@ -4,19 +4,22 @@
 
 
 #AboutUs {
+  width: 100%;
   background: rgba(225, 229, 234, 0.7);
   padding: 80px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  height: 800px;
 }
 
 .AboutPic {
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   flex-shrink: 0;
   margin-bottom: -40px;
+  margin-left: 70px;
 }
 
 .AboutFotka {
@@ -35,6 +38,7 @@
   line-height: 117.779%;
   /* 94.223px */
   margin-top: -60px;
+  margin-left: 20px;
 
 }
 
@@ -45,6 +49,7 @@
   font-size: 20px;
   font-style: normal;
   line-height: 39px;
+  width: 450px;
 }
 
 .ZahlavniText {
