@@ -21,8 +21,9 @@
   max-width: 500px;
   /* Центрирование текста */
   height: 150px;
-  margin-right: 180px;
-  margin-top: 100px;
+  margin-right: 100px;
+  margin-top: 230px;
+  margin-left: 130px;
 
 
 }
@@ -35,17 +36,33 @@
 }
 
 .image-right img {
-  max-width: 80%;
-
+  max-width: 100%;
+  margin-top: 80px;
   order: 1;
+  position: relative;
+  overflow: hidden;
+
+  /* Начальное состояние (за пределами справа) */
+  transform: translateX(100%);
+  opacity: 0;
+
+  /* Анимация */
+  animation: slideInFromRight 1.5s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
-.fotkamy {
-  margin-left: 900px;
-
-
-}
 
 .player-photo {
   width: 100px;
@@ -55,5 +72,26 @@
 }
 
 audio {
-  width: 100%;
+  width: 50%;
+}
+
+.music-photo-row {
+  display: flex;
+  margin-top: 4rem;
+  gap: 8rem;
+
+}
+
+.music-block {
+
+  min-width: 300px;
+}
+
+.fotkamy {
+  flex: 1;
+  max-width: 400px;
+
+  opacity: 0;
+
+
 }

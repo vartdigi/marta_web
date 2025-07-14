@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Works.css';
 import Follow from '../../../assets/Follow.png';
 import naseFotka from '../../../assets/naseFotka.png';
-import marta from '../../../assets/marta.png';
+
+import Music from './Music.jsx';
 
 export const Works = () => {
+  const fotkaRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }, // Процент видимости, когда активируется анимация
+    );
+
+    if (fotkaRef.current) {
+      observer.observe(fotkaRef.current);
+    }
+
+    return () => {
+      if (fotkaRef.current) {
+        observer.unobserve(fotkaRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="works-section">
       <div className="firstblock">
@@ -21,17 +46,13 @@ export const Works = () => {
           <img src={Follow} alt="Work" />
         </div>
       </div>
-      <div className="fotkamy">
-        <img src={naseFotka} alt="naseFotka" />
-      </div>
       <div className="photo-player">
-        <img src={marta} alt="Photo" className="player-photo" />
-        <audio controls>
-          <source src="song1.mp3" type="audio/mp3" />
-          <source src="song2.mp3" type="audio/mp3" />
-          <source src="song3.mp3" type="audio/mp3" />
-          Ваш браузер не поддерживает аудио элементы.
-        </audio>
+        <div className="music-photo-row">
+          <div className="music-block">
+            <Music />
+          </div>
+          <img src={naseFotka} alt="naseFotka" />
+        </div>
       </div>
     </section>
   );

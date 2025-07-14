@@ -1,0 +1,105 @@
+.music-container {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0;
+  margin-left: 3rem;
+  margin-top: 4rem;
+
+}
+
+.main-player {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.album-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.player-details h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.band-name {
+  margin: 4px 0 8px 0;
+  font-style: italic;
+  color: #666;
+}
+
+audio {
+
+  width: 530px;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.track-item:hover {
+  background-color: #f0f0f0;
+}
+
+.track-item.active {
+  background-color: #e3e3ff;
+}
+
+.track-number {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.track-title {
+  flex-grow: 1;
+}
+
+.play-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #444;
+}
+
+.play-button:hover {
+  color: #000;
+}
+
+.more-music-btn {
+  width: 157px;
+  height: 46px;
+  border-radius: 24px;
+  border: 1px solid #3E3274;
+  background: #EAEDF0;
+  color: #3E3274;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-music-btn:hover {
+  background: #d5d8dd;
+}

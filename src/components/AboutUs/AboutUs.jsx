@@ -11,7 +11,7 @@ export const AboutUs = () => {
       </div>
       <div className="ZahlavniText">
         <div className="HlavniNazev">
-          <h1>O nás</h1>
+          <h1>O NÁS</h1>
         </div>
 
         <div className="Text">
