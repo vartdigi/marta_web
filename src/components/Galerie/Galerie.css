@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
+
+#Galerie {
+  width: 100%;
+  background: rgba(225, 229, 234, 0.7);
+  padding: 80px;
+  height: 800px;
+}
+
+.HlavniNazevGalerie {
+
+  color: #000;
+  font-family: "Montserrat", normal;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 117.779%;
+  /* 94.223px */
+  margin-top: -60px;
+  margin-left: 20px;
+
+}
+
+.ZahlavniTextGalerie {
+  color: #000;
+  font-family: "Monserrat", normal;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 117.779%;
+  /* 94.223px */
+
+}
+
+.css-columns {
+  column-count: 3;
+  column-gap: 20px;
+
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+
+}
