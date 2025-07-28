@@ -13,33 +13,40 @@ const tracks = [
 
 const Music = () => {
   const audioRef = useRef(null);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const currentTrack = tracks[currentTrackIndex];
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(null); // žádný track na začátku
+  const currentTrack =
+    currentTrackIndex !== null ? tracks[currentTrackIndex] : null;
 
   const handleTrackClick = (index) => {
     setCurrentTrackIndex(index);
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    }, 100); // malá prodleva, aby se nový soubor stihl načíst
   };
 
   useEffect(() => {
-    if (audioRef.current) {
+    if (currentTrackIndex !== null && audioRef.current) {
       audioRef.current.load();
-      audioRef.current.play();
     }
   }, [currentTrackIndex]);
 
   return (
     <div className="music-container">
-      <div className="main-player">
-        <img src={Marta} alt="Album" className="album-photo" />
-        <div className="player-details">
-          <h3>{currentTrack.title}</h3>
-          <p className="band-name">Marta Duo</p>
-          <audio ref={audioRef} controls key={currentTrack.file}>
-            <source src={currentTrack.file} type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
+      {currentTrack && (
+        <div className="main-player">
+          <img src={Marta} alt="Album" className="album-photo" />
+          <div className="player-details">
+            <h3>{currentTrack.title}</h3>
+            <p className="band-name">Marta Duo</p>
+            <audio ref={audioRef} controls key={currentTrack.file}>
+              <source src={currentTrack.file} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="track-list">
         {tracks.map((track, index) => (
@@ -55,7 +62,7 @@ const Music = () => {
             <button className="play-button">▶</button>
           </div>
         ))}
-        <button class="more-music-btn">More Music</button>
+        <button className="more-music-btn">More Music</button>
       </div>
     </div>
   );

@@ -35,10 +35,11 @@ export const Works = () => {
       <div className="firstblock">
         <div className="text-left">
           <p>
-            Here is our last projekt - video on Youtube. You can follow us and
-            be in tune. Gjalsjfh ldfjrugodkjcg laksjid,, latros kombinus hadore.
-            Hamona drem be hrkara. Hilako kamuro lakremakasnub lora lumbus
-            hamrelo.
+            Jsme Marta Duo - housle a cello, dva nástroje, dva hlasy, jedna
+            duše. Naše hudební cesta začala dávno předtím, něž jsme si
+            uvědomili, že patříme na pódium společně. Hrály jsme v orchestrech,
+            cestovaly od Evropy do Asii, spolupracovaly se skvělými sólisty a
+            nasávali inspiraci na každém kroku.
           </p>
         </div>
 
