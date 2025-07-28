@@ -1,4 +1,3 @@
-import React from 'react';
 import './Video.css'; // pokud budeš mít vlastní CSS
 
 export const Video = () => {

@@ -5,7 +5,7 @@
   width: 100%;
   background: rgba(225, 229, 234, 0.7);
   padding: 80px;
-  height: 800px;
+  height: 100%
 }
 
 .HlavniNazevGalerie {
@@ -48,6 +48,8 @@
 
 .gallery-item img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease;
   display: block;
@@ -56,4 +58,55 @@
 .gallery-item:hover img {
   transform: scale(1.05);
 
+}
+
+@media screen and (max-width: 1100px) {
+  .css-columns {
+    column-count: 3;
+    column-gap: 1px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gallery-item img {
+    height: 180px;
+  }
+
+  #Galerie {
+    padding: 30px 10px;
+  }
+
+  .HlavniNazevGalerie {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .ZahlavniTextGalerie {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.more-photos-btn-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more-photos-btn {
+  width: 157px;
+  height: 46px;
+  border-radius: 24px;
+  border: 1px solid #3E3274;
+  background: #EAEDF0;
+  color: #3E3274;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-photos-btn:hover {
+  background: #d5d8dd;
 }

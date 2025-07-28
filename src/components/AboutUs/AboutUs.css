@@ -62,3 +62,36 @@
   /* 94.223px */
 
 }
+
+@media screen and (max-width: 768px) {
+  #AboutUs {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .AboutPic {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .Text {
+    width: 100%;
+    font-size: 16px;
+    padding: 20px 10px;
+  }
+
+  .HlavniNazev {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .ZahlavniText {
+    font-size: 24px;
+    text-align: center;
+  }
+}

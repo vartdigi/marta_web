@@ -42,8 +42,10 @@ export const Works = () => {
             nasávali inspiraci na každém kroku.
           </p>
         </div>
-
-        <div className="image-right">
+        <div
+          className={`image-right ${isVisible ? 'visible' : ''}`}
+          ref={fotkaRef}
+        >
           <img src={Follow} alt="Work" />
         </div>
       </div>

@@ -38,7 +38,7 @@
 }
 
 audio {
-
+  width: 100%;
   width: 530px;
 }
 
@@ -103,4 +103,47 @@ audio {
 
 .more-music-btn:hover {
   background: #d5d8dd;
+}
+
+@media screen and (max-width: 768px) {
+  .music-container {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 20px;
+  }
+
+  .main-player {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album-photo {
+    margin: 0 0 1rem 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .player-details h3 {
+    font-size: 16px;
+  }
+
+  .band-name {
+    font-size: 14px;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .track-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .play-button {
+    align-self: flex-end;
+  }
 }

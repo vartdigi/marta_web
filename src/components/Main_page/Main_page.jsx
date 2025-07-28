@@ -1,4 +1,3 @@
-import React from 'react';
 import './Main_page.css';
 import HlavniFotka from '../../../assets/HlavniFotka.jpg';
 import stin from '../../../assets/stin.svg';

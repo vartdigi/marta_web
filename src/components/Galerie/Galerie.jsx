@@ -1,15 +1,13 @@
-import React from 'react';
-import Masonry from 'react-masonry-css';
 import './Galerie.css';
+import { useState, useEffect } from 'react';
 
 const images = [
   '1.jpg',
   '2.jpg',
   '3.jpg',
   '4.jpg',
-  '5.jpeg',
-  '6.jpg', // oprava názvu z "6jpg"
-
+  '5.jpg',
+  '6.jpg',
   '8.jpg',
   '9.jpg',
   '10.jpg',
@@ -20,10 +18,8 @@ const images = [
   '15.jpg',
   '16.jpg',
   '17.jpg',
-
   '19.jpg',
   '20.jpg',
-
   '22.jpg',
   '23.jpg',
   '24.jpeg',
@@ -34,16 +30,23 @@ const images = [
   '29.jpeg',
   '30.jpeg',
   '31.jpeg',
-  // Přidej další názvy podle potřeby
 ];
 
-const breakpointColumnsObj = {
-  default: 3,
-  1100: 2,
-  700: 1,
-};
-
 export const Galerie = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
+  const displayedImages = !showAll ? images.slice(0, 6) : images;
   return (
     <section id="Galerie">
       <div className="ZahlavniTextGalerie">
@@ -51,13 +54,26 @@ export const Galerie = () => {
           <h1>Galerie</h1>
         </div>
       </div>
+
       <div className="css-columns">
-        {images.map((img, index) => (
+        {displayedImages.map((img, index) => (
           <div className="gallery-item" key={index}>
-            <img src={`/images/${img}`} alt={`Foto ${index + 1}`} />
+            <img
+              src={`/images/${img}`}
+              alt={`Foto ${index + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
+
+      {!showAll && (
+        <div className="more-photos-btn-wrapper">
+          <button onClick={() => setShowAll(true)} className="more-photos-btn">
+            Více fotek
+          </button>
+        </div>
+      )}
     </section>
   );
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutUs.css';
 import Onas from '../../../assets/Onas.jpg';
 import { Link } from 'react-router-dom';

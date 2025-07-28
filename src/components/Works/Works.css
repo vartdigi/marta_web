@@ -4,13 +4,11 @@
 
 
 .works-section {
-
   padding: 20px;
   background-color: white;
 }
 
 .text-left {
-
   color: #000;
   padding: 30px;
   font-family: "Montserrat", normal;
@@ -22,8 +20,9 @@
   /* Центрирование текста */
   height: 150px;
   margin-right: 100px;
-  margin-top: 130px;
+  margin-top: 100px;
   margin-left: 130px;
+  margin-bottom: 300px;
 
 
 }
@@ -32,36 +31,50 @@
 .firstblock {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
 }
 
-.image-right img {
-  max-width: 100%;
-  margin-top: 80px;
-  order: 1;
-  position: relative;
-  overflow: hidden;
 
-  /* Начальное состояние (за пределами справа) */
-  transform: translateX(100%);
-  opacity: 0;
-
-  /* Анимация */
-  animation: slideInFromRight 1.5s ease-out forwards;
-}
-
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
+@media screen and (max-width: 768px) {
+  .firstblock {
+    flex-direction: column;
+    text-align: center;
   }
 
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  .text-left {
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .image-right {
+    width: 90%;
+    margin: 20px auto 0;
+  }
+
+  .image-right img {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .music-photo-row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .music-container {
+    margin-left: 0;
+    width: 90%;
+  }
+
+  audio {
+    width: 100%;
   }
 }
-
 
 
 .player-photo {
@@ -90,8 +103,25 @@ audio {
 .fotkamy {
   flex: 1;
   max-width: 400px;
-
   opacity: 0;
 
 
+}
+
+.image-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 2s ease-out, opacity 1s ease-out;
+
+}
+
+.image-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-right img {
+  max-width: 700px;
+  height: auto;
+  display: block;
 }
