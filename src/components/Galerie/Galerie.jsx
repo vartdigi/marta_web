@@ -48,7 +48,7 @@ export const Galerie = () => {
 
   const displayedImages = !showAll ? images.slice(0, 6) : images;
   return (
-    <section id="Galerie">
+    <section id="galerie">
       <div className="ZahlavniTextGalerie">
         <div className="HlavniNazevGalerie">
           <h1>Galerie</h1>

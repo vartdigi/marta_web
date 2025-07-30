@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const AboutUs = () => {
   return (
-    <section id="AboutUs">
+    <section id="aboutus">
       <div className="AboutFotka">
         <img className="AboutPic" src={Onas} />
       </div>

@@ -4,7 +4,7 @@ import stin from '../../../assets/stin.svg';
 
 export const Main_page = () => {
   return (
-    <section id="Main_page">
+    <section id="main_page">
       <div className="HlavniFotka">
         <img className="MainPic" src={HlavniFotka} />
       </div>

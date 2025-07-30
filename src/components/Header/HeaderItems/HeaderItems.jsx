@@ -1,20 +1,51 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './HeaderItems.css';
+import { useEffect } from 'react';
 
-export const HeaderItems = () => {
+export const HeaderItems = ({ onSelect }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionId = location.hash.replace('#', '');
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  const handleClick = (id) => {
+    onSelect();
+  };
+
   return (
     <>
-      <Link to="/" className="menu-item">
+      <Link
+        to={{ pathname: '/', hash: '#hlavni' }}
+        className="menu-item"
+        onClick={() => handleClick('hlavni')}
+      >
         Hlavní
       </Link>
-      <Link to="/AboutUs" className="menu-item">
+
+      <Link to="/about-full" className="menu-item" onClick={onSelect}>
         O nás
       </Link>
 
-      <Link to="/Galerie" className="menu-item">
+      <Link
+        to={{ pathname: '/', hash: '#galerie' }}
+        className="menu-item"
+        onClick={() => handleClick('galerie')}
+      >
         Galerie
       </Link>
-      <Link to="/#Kontakt" className="menu-item">
+
+      <Link
+        to={{ pathname: '/', hash: '#kontakt' }}
+        className="menu-item"
+        onClick={() => handleClick('kontakt')}
+      >
         Kontakt
       </Link>
     </>
