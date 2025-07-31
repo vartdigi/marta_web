@@ -1,11 +1,15 @@
 import './Footer.css';
 import FooterPic from '../../../assets/Footer.png';
 import { FaEnvelope, FaInstagram, FaPhone } from 'react-icons/fa';
+import Sipka from '../../../assets/sipka.svg';
 
 export const Footer = () => {
   return (
     <footer id="contact">
       <div className="containter-footer">
+        <div className="sipka">
+          <img src={Sipka} alt="šipka" className="arrow" />
+        </div>
         <img className="Footer" src={FooterPic} alt="Footer" />
         <div className="Info">
           <div className="Email item">

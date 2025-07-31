@@ -5,18 +5,12 @@ import { useEffect } from 'react';
 export const HeaderItems = ({ onSelect }) => {
   const location = useLocation();
 
-  useEffect(() => {
-    const sectionId = location.hash.replace('#', '');
-    if (sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
-
   const handleClick = (id) => {
-    onSelect();
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    onSelect(); // zavře hamburger menu
   };
 
   return (

@@ -103,6 +103,30 @@
   }
 }
 
+.arrow {
+  width: 20px;
+  height: auto;
+  margin-bottom: 6px;
+  animation: arrowBounce 1.5s infinite;
+  position: absolute;
+  left: 46%;
+  bottom: 20%;
+
+}
+
+/* volitelná animace */
+@keyframes arrowBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
 @media (max-width: 768px) {
   .Info {
     gap: 30px;
