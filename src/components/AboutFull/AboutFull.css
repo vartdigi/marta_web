@@ -20,7 +20,7 @@ html {
 
 .Secondtext {
   background: rgba(225, 229, 234, 0.7);
-  border-radius: 10%;
+  border-radius: 10px;
   color: #000;
   padding: 30px;
   font-family: "Montserrat", sans-serif;
@@ -28,6 +28,8 @@ html {
   font-style: normal;
   width: 450px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  line-height: 1.6;
 }
 
 .members {
@@ -49,6 +51,13 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.members p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
 }
 
 @media (max-width: 480px) {
