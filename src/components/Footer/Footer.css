@@ -1,5 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
+
+
+.containter-footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.Footer {
+  width: 100%;
+  height: 350px;
+  max-width: 100%;
+  object-fit: cover;
+  margin-top: 50px;
+}
+
 .Info {
   display: inline-flex;
-  align-items: center;
+  flex-direction: row;
   gap: 187px;
+  font-family: "Lunasima", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 16px;
+  position: absolute;
+  font-weight: bold;
+
+}
+
+.footer-note {
+  margin-top: 25px;
+  font-size: 16px;
+  color: #5a5959;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small pod textem */
+.footer-note small {
+  font-size: 13px;
+  margin-top: 5px;
+  position: static;
+  /* odstraněno absolute */
+}
+
+/* Pro mobil */
+@media (max-width: 480px) {
+  .footer-note {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    margin-top: 0;
+    color: rgb(34, 34, 34);
+    /* pokud na obrázku */
+
+  }
+
+  .footer-note small {
+    font-size: 8px;
+    margin-top: 3px;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .Info {
+    gap: 30px;
+    font-size: 20px;
+  }
+}
+
+/* Mobily */
+@media (max-width: 480px) {
+  .Info {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    font-size: 10px;
+    bottom: 60px;
+    margin: 4px;
+    gap: 40px;
+
+
+
+  }
+
+
 }

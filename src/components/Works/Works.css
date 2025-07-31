@@ -91,20 +91,18 @@ audio {
 .music-photo-row {
   display: flex;
   margin-top: 4rem;
-  gap: 8rem;
+
 
 }
 
 .music-block {
-
   min-width: 300px;
 }
 
-.fotkamy {
-  flex: 1;
-  max-width: 400px;
-  opacity: 0;
 
+.naseFotka img {
+  max-width: 250px;
+  margin-top: 1rem;
 
 }
 

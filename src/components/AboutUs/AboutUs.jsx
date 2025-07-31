@@ -17,8 +17,8 @@ export const AboutUs = () => {
           <p>
             Řekneme, že jsme klasické smyčcové duo. Možna to není celá pravda.
             Barvy, smích, přátelství a svoboda, to je to, co nám v práci každý
-            den chybělo. Sundali jsme si boty, změnili černý dress-code na
-            barevný a začali sme se bavit.
+            den chybělo. Sundali jsme si filharmonické boty, změnili černý
+            dress-code na barevný a začali sme se bavit.
             <Link to="/about-full" className="read-more">
               {' '}
               Číst dále...

@@ -42,9 +42,9 @@ export const HeaderItems = ({ onSelect }) => {
       </Link>
 
       <Link
-        to={{ pathname: '/', hash: '#kontakt' }}
+        to={{ pathname: '/', hash: '#contact' }}
         className="menu-item"
-        onClick={() => handleClick('kontakt')}
+        onClick={() => handleClick('contact')}
       >
         Kontakt
       </Link>

@@ -34,7 +34,7 @@ export const Header = () => {
       </button>
 
       {/* Mobile menu */}
-      {menuOpened && (
+      { menuOpened && (
         <nav className="hamburger-menu open">
           <HeaderItems onSelect={handleSelectItem} />
         </nav>

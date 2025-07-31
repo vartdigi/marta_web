@@ -54,7 +54,9 @@ export const Works = () => {
           <div className="music-block">
             <Music />
           </div>
-          <img src={naseFotka} alt="naseFotka" />
+          <div className="naseFotka">
+            <img src={naseFotka} alt="naseFotka" />
+          </div>
         </div>
       </div>
     </section>
