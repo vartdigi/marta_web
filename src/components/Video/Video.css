@@ -2,11 +2,11 @@
   padding: 60px 20px;
   background-color: #f8f8f8;
   text-align: center;
+
 }
 
 .videos-wrapper {
   display: flex;
-
   justify-content: center;
   gap: 10px;
 }

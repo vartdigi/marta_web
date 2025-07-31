@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Baskervville:ital@0;1&family=Kaisei+Tokumin&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lunasima:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
 
 
+
 .containter-footer {
   display: flex;
   position: relative;
@@ -27,8 +28,36 @@
   margin-top: 10px;
   font-size: 16px;
   position: absolute;
-  font-weight: bold;
 
+
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: #191721;
+  /* nebo barva podle designu */
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-note {
@@ -48,7 +77,10 @@
   margin-top: 5px;
   position: static;
   /* odstraněno absolute */
+
 }
+
+
 
 /* Pro mobil */
 @media (max-width: 480px) {
@@ -84,14 +116,17 @@
     display: flex;
     justify-content: center;
     align-content: space-between;
-    font-size: 10px;
+    font-size: 9px;
     bottom: 60px;
-    margin: 4px;
-    gap: 40px;
+    margin-left: 20px;
+
 
 
 
   }
 
+  .Info p svg {
+    margin-right: 8px;
+  }
 
 }
